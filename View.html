@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruti Suzuki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="img/Logo.png" alt="Suzuki Logo" style="height: 24px;">
+                <span class="logo-text">MARUTI SUZUKI</span>
+            </div>
+
+            <div class="right-section">
+                <div class="powered-by">
+                    Powered by DE »<span style="margin: 0 10px; color: #ccc;">|</span>
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <i class="fas fa-user" style="color: #757575; font-size: 12px;"></i>
+                    </div>
+                    <div class="user-details">
+                        <div class="user-name" style="display: flex; align-items: center; gap: 6px;">
+                            Maruti ABC
+                            <div style="width: 16px; height: 16px; background-color: #f0f0f0; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-chevron-down" style="color: #2a3591; font-size: 8px;"></i>
+                            </div>
+                        </div>
+                        <div class="user-subtitle">124</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="heading">
+                <h1>MSIL SPARE PARTS CLAIM</h1>
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" onclick="toggleTab(event, 'active-claims')">Active Claims</div>
+                <div class="tab" onclick="toggleTab(event, 'history')">History</div>
+            </div>
+
+            <!-- Active Claims Content (Default Active) -->
+            <div class="content-box active" id="active-claims">
+                <div class="search-row">
+                    <div class="search-label">Search By</div>
+                    <div class="search-dropdown">
+                        <select>
+                            <option>Select</option>
+                            <option>Claim Number</option>
+                            <option>Date</option>
+                            <option>Status</option>
+                        </select>
+                    </div>
+                    <input type="text" class="search-input" placeholder="">
+                    <button class="search-btn">GO</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="claims-table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Claim Number</th>
+                                <th>Submitted Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="claim-number"><a href="Edit.html">0001</a></td>
+                                <td>11-11-2024</td>
+                                <td>Acknowledged</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="claim-number">0002</td>
+                                <td>04-04-2024</td>
+                                <td>Under Analysis</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="claim-number">0003</td>
+                                <td>01-01-2024</td>
+                                <td>New Order Processed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- History Content (Initially Hidden) -->
+            <div id="history" class="content-box">
+                <div class="search-row">
+                    <div class="search-label">Search By</div>
+                    <div class="search-dropdown">
+                        <select>
+                            <option>Select</option>
+                            <option>Claim Number</option>
+                            <option>Date</option>
+                            <option>Status</option>
+                        </select>
+                    </div>
+                    <input type="text" class="search-input" placeholder="">
+                    <button class="search-btn">GO</button>
+                </div>
+
+                <div class="table-container">
+                    <table class="claims-table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>Claim Number</th>
+                                <th>Submitted Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="claim-number"><a href="History.html">0001</a></td>
+                                <td>11-11-2024</td>
+                                <td>Acknowledged</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="claim-number">0002</td>
+                                <td>04-04-2024</td>
+                                <td>Under Analysis</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="claim-number">0003</td>
+                                <td>01-01-2024</td>
+                                <td>New Order Processed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <a href="Spares.html" class="back-button">
+            <i class="fa-solid fa-reply back-icon"></i>
+        </a>
+    </div>
+
+    <script>
+        function toggleTab(event, tabName) {
+            // Remove 'active' class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+
+            // Add 'active' class to the clicked tab
+            event.target.classList.add('active');
+
+            // Hide all tab content
+            document.querySelectorAll('.content-box').forEach(content => content.classList.remove('active'));
+
+            // Show the corresponding tab content
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+</body>
+</html>

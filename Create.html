@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruti Suzuki</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="img/Logo.png" alt="Suzuki Logo" style="height: 24px;">
+                <span class="logo-text">MARUTI SUZUKI</span>
+              </div>              
+
+              <div class="right-section">
+                <div class="powered-by">
+                  Powered by DE »<span style="margin: 0 10px; color: #ccc;">|</span>
+                </div>
+                <div class="user-info">
+                  <div class="user-avatar">
+                    <i class="fas fa-user" style="color: #757575; font-size: 12px;"></i>
+                  </div>
+                  <div class="user-details">
+                    <div class="user-name" style="display: flex; align-items: center; gap: 6px;">
+                      Maruti ABC
+                      <div style="width: 16px; height: 16px; background-color: #f0f0f0; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-chevron-down" style="color: #2a3591; font-size: 8px;"></i>
+                      </div>
+                    </div>
+                    <div class="user-subtitle">124</div>
+                  </div>
+                </div>
+              </div>
+              
+              
+        </header>
+
+        <main class="main-content">
+                <div class="form-inner">
+                    <div class="form-title">MSIL SPARE PARTS CLAIM</div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Date</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control">
+                            
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ref. No.</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Invoice No.</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Dist. Name/Code</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Invoice Date</label>
+                            <div class="date-input">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="form-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Sales No.</th>
+                                    <th>Case No.</th>
+                                    <th>Carton No.</th>
+                                    <th>Part No. on Invoice</th>
+                                    <th>Part Name</th>
+                                    <th>Inv. Qty.</th>
+                                    <th>Part No. Received</th>
+                                    <th>Recd. Qty.</th>
+                                    <th>Claim Qty.</th>
+                                    <th>Unit FOB</th>
+                                    <th>Reason</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="photos-section">
+                        <label class="form-label">Photo(s)</label>
+                        <div class="photo-container">
+                            <div class="photo-item">
+                                <img src="/api/placeholder/38/38" alt="Photo">
+                                <div class="remove-photo">×</div>
+                            </div>
+                            <div class="photo-item">
+                                <img src="/api/placeholder/38/38" alt="Photo">
+                                <div class="remove-photo">×</div>
+                            </div>
+                            <div class="photo-item">
+                                <img src="/api/placeholder/38/38" alt="Photo">
+                                <div class="remove-photo">×</div>
+                            </div>
+                            <div class="photo-item photo-upload" onclick="document.getElementById('file-input').click();">
+                                <i class="fas fa-plus"></i> <!-- Font Awesome Plus Icon -->
+                            </div>
+                            <!-- Hidden file input to allow image selection -->
+                            <input type="file" id="file-input" style="display: none;" accept="image/*" onchange="addPhoto(event)">
+                        </div>
+                    </div>
+                    <button class="add-row-btn">
+                        <span class="add-icon">
+                            <i class="fas fa-plus"></i>
+                        </span>
+                          Add New Row
+                    </button>                                      
+                    
+                    <div class="comments-section">
+                        <div class="comments-box">
+                            <label class="comments-label">Distributor's Comments</label>
+                            <textarea class="comments-textarea"></textarea>
+                        </div>
+                        <div class="comments-box">
+                            <label class="comments-label">Remarks</label>
+                            <textarea class="comments-textarea"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <div class="note-item">
+                            <span class="note-bullet">•</span>
+                            <span>Claims will be accepted by MSIL within 6 months from the date of invoice</span>
+                        </div>
+                        <div class="note-item">
+                            <span class="note-bullet">•</span>
+                            <span>No claimed part value should be lodged with MSIL with a total FOB value of less than USD 10, EUR 10, INR 800, JPY 1500</span>
+                        </div>
+                        <div class="note-item">
+                            <span class="note-bullet">•</span>
+                            <span>In case of damages/mis-shipment/wrong part, claim should be sent along with clear photographs</span>
+                        </div>
+                        <div class="note-item">
+                            <span class="note-bullet">•</span>
+                            <span>In case a carton is missing/carton contains short quantity. Write the missing carton no.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="submit-section">
+                    <button class="submit-btn" onclick="openModal()">SUBMIT</button>
+                </div>
+
+                <!-- Modal Structure -->
+                <div id="submitModal" class="modal">
+                    <div class="modal-content2">
+                        <!-- Close Button -->
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        
+                        <!-- Modal Body with white background -->
+                        <div class="modal-body">
+                            <p>Claim submitted successfully.</p>
+                        </div>
+                        
+                        <!-- OK Button -->
+                        <button class="modal-btn" onclick="redirectToSpares()">OK</button>
+                    </div>
+                </div>
+                
+                <a href="Spares.html" class="back-button"> 
+                    <i class="fa-solid fa-reply back-icon"></i>
+                </a>
+           
+        </main>
+        <script>
+            function addPhoto(event) {
+                const file = event.target.files[0]; // Get the selected file
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        // Create a new photo item element
+                        const newPhotoItem = document.createElement('div');
+                        newPhotoItem.classList.add('photo-item');
+                        
+                        // Add the image
+                        const img = document.createElement('img');
+                        img.src = e.target.result;  // The image data URL
+                        newPhotoItem.appendChild(img);
+                        
+                        // Add the remove button
+                        const removeButton = document.createElement('div');
+                        removeButton.classList.add('remove-photo');
+                        removeButton.textContent = '×';
+                        removeButton.onclick = function() {
+                            newPhotoItem.remove(); // Remove the photo when clicked
+                        };
+                        newPhotoItem.appendChild(removeButton);
+                        
+                        // Append the new photo item to the container
+                        document.querySelector('.photo-container').insertBefore(newPhotoItem, document.querySelector('.photo-upload'));
+                    };
+                    reader.readAsDataURL(file); // Read the image file as a data URL
+                }
+            }
+// On page load, ensure the modal is hidden
+window.onload = function() {
+    document.getElementById('submitModal').style.display = 'none';
+};
+
+function openModal() {
+    document.getElementById('submitModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('submitModal').style.display = 'none';
+}
+
+function redirectToSpares() {
+    document.getElementById('submitModal').style.display = 'none'; // Hide modal before redirect
+    window.location.href = "Spares.html"; // Redirect to Spares.html
+}
+
+        </script>
+        
+    </div>
+</body>
+</html>
